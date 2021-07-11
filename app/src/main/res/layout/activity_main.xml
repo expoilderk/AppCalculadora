@@ -1,18 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/txt_calc"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="end"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_numbers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:maxLength="24"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="@string/number"
+                    android:textColor="@color/white"
+                    android:textSize="55dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_ac"
+                    style="@style/CalcButtons"/>
+
+                <Button
+                    android:id="@+id/btn_divide"
+                    style="@style/CalcButtons"/>
+
+                <Button
+                    android:id="@+id/btn_multiplica"
+                    style="@style/CalcButtons"/>
+
+                <ImageButton
+                    android:id="@+id/btn_limpa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/darkgray"
+                    android:src="@drawable/ic_back"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_num_7"
+                    style="@style/CalcButtons"/>
+
+                <Button
+                    android:id="@+id/btn_num_8"
+                    style="@style/CalcButtons"/>
+
+                <Button
+                    android:id="@+id/btn_num_9"
+                    style="@style/CalcButtons"/>
+
+                <Button
+                    android:id="@+id/btn_menos"
+                    style="@style/CalcButtons"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_num_4"
+                    style="@style/CalcButtons"/>
+
+                <Button
+                    android:id="@+id/btn_num_5"
+                    style="@style/CalcButtons"/>
+
+                <Button
+                    android:id="@+id/btn_num_6"
+                    style="@style/CalcButtons"/>
+
+                <Button
+                    android:id="@+id/btn_mais"
+                    style="@style/CalcButtons"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_num_1"
+                            style="@style/CalcButtons"/>
+
+                        <Button
+                            android:id="@+id/btn_num_2"
+                            style="@style/CalcButtons"/>
+
+                        <Button
+                            android:id="@+id/btn_num_3"
+                            style="@style/CalcButtons"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_num_0"
+                            style="@style/CalcButtons"/>
+
+                        <Button
+                            android:id="@+id/btn_ponto"
+                            style="@style/CalcButtons"/>
+
+                        <Button
+                            android:id="@+id/btn_sinal"
+                            style="@style/CalcButtons"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="3">
+
+                    <Button
+                        android:id="@+id/btn_igual"
+                        android:layout_gravity="center"
+                        style="@style/CalcButtons"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
